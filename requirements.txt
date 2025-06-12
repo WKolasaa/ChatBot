@@ -1,0 +1,9 @@
+numpy
+pandas
+scikit-learn
+sentence-transformers
+ollama
+streamlit  # only if using web interface
+python-docx
+pdfplumber
+python-pptx

@@ -1,0 +1,64 @@
+
+
+TNO classifying arrhythmia in Fighter Pilots
+GROUP 3
+Bianca Burlacu
+Codrin Calin
+Salman Kanj
+Wojciech Kolasa
+
+
+
+
+Table of contents
+Project introduction
+Technologies Used
+Demo
+Conclusion
+
+
+Project introduction
+
+Project Goal:Develop a robust arrhythmia classifier to detect irregular heartbeats in F-35 pilots using ECG data.
+Challenge:Ensure the model generalizes across different sensor types and flight conditions, despite limited in-flight arrhythmia data.
+Approach:Focus on domain-transfer techniques to improve robustness. Initial results show SVCs outperform traditional models like Random Forests in cross-domain performance.
+
+
+Datasets Used
+Train Set Distribution
+Train Set Counts
+Data augmentation & Balancing
+
+Data augmentation is a technique that increase the size of a training dataset by applying various transformations to existing data samples.
+The purpose of data augmentation is to introduce diversity and variability into the training data, which can help improve the performance and generalization of machine learning models.
+The distribution of our data between different categories is not balanced. Therefore our model will train with unbalanced data and find bias and will be overfit. Balancing the dataset is crucial for building robust and unbiased machine learning models that can effectively generalize to unseen data and provide fair and accurate predictions across all classes.
+After Balancing
+After Balancing
+CNN + LSTM Model
+The model consists of three CNN layers, each with 64 filters and a kernel size of 6 for the first layer, and 3 for the second and third layers. ReLU activation functions are applied after each convolutional layer. Additionally, batch normalization layers are included after each Conv1D layer to normalize the activations. MaxPooling layers follow each Conv1D layer to reduce the spatial dimensions of the feature maps.
+Following the CNN layers, two LSTM layers are added. The first LSTM layer contains 64 units and returns sequences. It utilizes the hyperbolic tangent (tanh) activation function. The second LSTM layer comprises 32 units and also uses the tanh activation function. LSTM layers are commonly employed for processing sequential data such as time series or text.
+After the LSTM layers, a Flatten layer is introduced. This layer transforms the output of the LSTM layers into a 1D tensor, which is suitable for input to the Dense layers.
+Finally, three Dense (fully connected) layers are appended to the model. The first Dense layer contains 64 units, and the second Dense layer contains 32 units, with ReLU activation applied to both layers. The output Dense layer consists of 5 units with softmax activation, making it suitable for a multi-class classification problem with 5 classes.
+
+Confusion Matrix
+
+
+Technologies used
+Backend: Python
+Frontend: Vue 3, Vite, Quasar
+Version Control: GitHub
+Deployment: Azure
+Database: MySQL
+
+
+
+
+Demo
+
+
+
+Conclusion 
+Developed a deep learning model for arrhythmia classification tailored to F-35 pilots
+Achieved strong generalization using CNN + LSTM architecture
+Demonstrated effectiveness through cross-domain performance and balanced evaluation
+Deployment-ready solution integrated with a full-stack application
