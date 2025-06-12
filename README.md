@@ -10,7 +10,7 @@ Team Members:
 
 ## Project Overview
 
-This project presents an intelligent NLP-based chatbot designed to answer questions about the “Classifying Arrhythmia in Fighter Pilots” research for TNO. The system processes all project documentation—client info, research reports, data cleaning logs, model details, and presentations—to support interactive Q&A, context-following conversations, and information retrieval. The core NLP pipeline is built with **retrieval-augmented generation (RAG)** techniques implemented from scratch, focusing on document chunking, vector embeddings, and semantic similarity search. The chatbot is deployable via command line or Streamlit interface and runs entirely offline using local LLMs with Ollama.
+This project presents an intelligent NLP-based chatbot designed to answer questions about the “Classifying Arrhythmia in Fighter Pilots” research for TNO. The system processes all project documentation—client info, research reports, data cleaning logs, model details, and presentations—to support interactive Q&A, context-following conversations, and information retrieval. The core NLP pipeline is built with **retrieval-augmented generation (RAG)** techniques implemented from scratch, focusing on document chunking, vector embeddings, and semantic similarity search. The chatbot is deployable via command line and runs entirely offline using local LLMs with Ollama.
 
 ---
 
